@@ -1,0 +1,2 @@
+class Living < ApplicationRecord
+end

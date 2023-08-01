@@ -1,0 +1,158 @@
+<div class="container">
+  <main>
+    <div class="py-5 text-center">
+      <h2>Office Details Form</h2>
+      <p class="lead">Please provide your office Details </p>
+    </div>
+  </main>
+  <div class="container mt-4">
+
+<div class="container mt-4">
+<%= form_with(model: @office, url: office_path, local: true) do |f| %>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :Company %>
+          <%= f.text_field :Company, class: "form-control" %>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :role %>
+          <%= f.text_field :role, class: "form-control" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :employee_id %>
+          <%= f.text_field :employee_id, class: "form-control" %>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :employee_mail_id %>
+          <%= f.email_field :employee_mail_id, class: "form-control" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :laptop_serial %>
+          <%= f.text_field :laptop_serial, class: "form-control" %>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :laptop_model %>
+          <%= f.text_field :laptop_model, class: "form-control" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :laptop_brand %>
+          <%= f.text_field :laptop_brand, class: "form-control" %>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :laptop_mac %>
+          <%= f.text_field :laptop_mac, class: "form-control" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <%= f.label :hoodies %>
+          <div class="form-check">
+            <%= f.check_box :waterbottle, class: "form-check-input" %>
+            <%= f.label :waterbottle, class: "form-check-label" do %>
+              Water Bottle
+            <% end %>
+          </div>
+          <div class="form-check">
+            <%= f.check_box :headset, class: "form-check-input" %>
+            <%= f.label :headset, class: "form-check-label" do %>
+              Headset
+            <% end %>
+          </div>
+          <div class="form-check">
+            <%= f.check_box :mobile, class: "form-check-input" %>
+            <%= f.label :mobile, class: "form-check-label" do %>
+              Mobile
+            <% end %>
+          </div>
+          <div class="form-check">
+            <%= f.check_box :bag, class: "form-check-input" %>
+            <%= f.label :bag, class: "form-check-label" do %>
+              Bag
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <%= f.label :experience %>
+          <%= f.text_area :experience, class: "form-control" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :account_number %>
+          <%= f.text_field :account_number, class: "form-control" %>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :bank_name %>
+          <%= f.text_field :bank_name, class: "form-control" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :branch %>
+          <%= f.text_field :branch, class: "form-control" %>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :ifsc_code %>
+          <%= f.text_field :ifsc_code, class: "form-control" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <%= f.label :account_holder_name %>
+          <%= f.text_field :account_holder_name, class: "form-control" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <%= f.submit 'Submit', class: "btn btn-danger btn-block m-5" %>
+      </div>
+    </div>
+  <% end %>
+</div>

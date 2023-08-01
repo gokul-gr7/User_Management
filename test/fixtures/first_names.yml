@@ -1,0 +1,53 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lastName: MyString
+  Email: MyString
+  phone: MyString
+  school: MyString
+  10th_percentage: MyString
+  12th_percentage: MyString
+  college: MyString
+  cgpa: MyString
+  aadhaar: MyString
+  pan: MyString
+  profession: MyString
+  instagram: MyString
+  facebook: MyString
+  twitter: MyString
+  thread: MyString
+  whatsapp: MyString
+  fatherName: MyString
+  MotherName: MyString
+  Fathercontact: MyString
+  MotherContact: MyString
+  Marital: MyString
+  FavColor: MyString
+  DOB: MyString
+  nickName: MyString
+
+two:
+  lastName: MyString
+  Email: MyString
+  phone: MyString
+  school: MyString
+  10th_percentage: MyString
+  12th_percentage: MyString
+  college: MyString
+  cgpa: MyString
+  aadhaar: MyString
+  pan: MyString
+  profession: MyString
+  instagram: MyString
+  facebook: MyString
+  twitter: MyString
+  thread: MyString
+  whatsapp: MyString
+  fatherName: MyString
+  MotherName: MyString
+  Fathercontact: MyString
+  MotherContact: MyString
+  Marital: MyString
+  FavColor: MyString
+  DOB: MyString
+  nickName: MyString
