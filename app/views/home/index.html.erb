@@ -17,7 +17,7 @@
 
       <div class="input-group">
 
-        <%= text_field_tag(:query, params[:query], class: "form-control", placeholder: "Enter Keywords") %>
+        <%= text_field_tag(:query, params[:query], class: "form-control", placeholder: "Enter id to search ") %>
 
         <%= submit_tag('Search', class: "btn btn-primary") %>
       </div>
@@ -25,5 +25,37 @@
 
   <% end %>
     </div>
+
+<div class="search-results m-5 text-dark p-5">
+    <% if @results.any? %>
+
+      <h3>Search Results:</h3>
+
+      <ul>
+
+        <% @results.each do |result| %>
+
+          <li>
+
+            <strong>Employee:</strong> <%= result['Employee'].first %>
+          </li>
+            <br>
+          <li>
+            <strong>Company:</strong> <%= result['Company'].first %>
+          </li>
+            <br>
+          <li>
+            <strong>Branch:</strong> <%= result['Branch'].first %>
+
+
+          </li>
+
+        <% end %>
+
+      </ul>
+
+    <% end %>
+
+  </div>
 
    

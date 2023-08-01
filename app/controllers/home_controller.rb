@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 
-  require 'rsolr'
+
 
   def index
 

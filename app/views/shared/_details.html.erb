@@ -12,14 +12,14 @@
     <div class="row">
       <div class="col-md-6">
         <div class="form-group">
-          <%= f.label :first_name %>
-          <%= f.text_field :first_name, class: "form-control" %>
+          <%= f.label :firstName %>
+          <%= f.text_field :firstName, class: "form-control" %>
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
-          <%= f.label :last_name %>
-          <%= f.text_field :last_name, class: "form-control" %>
+          <%= f.label :lastName %>
+          <%= f.text_field :lastName, class: "form-control" %>
         </div>
       </div>
     </div>
@@ -27,8 +27,8 @@
     <div class="row">
       <div class="col-md-6">
         <div class="form-group">
-          <%= f.label :email %>
-          <%= f.email_field :email, class: "form-control" %>
+          <%= f.label :Email %>
+          <%= f.email_field :Email, class: "form-control" %>
         </div>
       </div>
       <div class="col-md-6">
@@ -42,27 +42,6 @@
     <div class="row">
       <div class="col-md-6">
         <div class="form-group">
-          <%= f.label :username %>
-          <%= f.text_field :username, class: "form-control" %>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group">
-          <%= f.label :password %>
-          <%= f.password_field :password, class: "form-control" %>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-6">
-        <div class="form-group">
-          <%= f.label :password_confirmation %>
-          <%= f.password_field :password_confirmation, class: "form-control" %>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group">
           <%= f.label :school %>
           <%= f.text_field :school, class: "form-control" %>
         </div>
@@ -72,14 +51,14 @@
     <div class="row">
       <div class="col-md-6">
         <div class="form-group">
-          <%= f.label :percentage_10th %>
-          <%= f.text_field :percentage_10th, class: "form-control" %>
+          <%= f.label :tenth_percentage %>
+          <%= f.text_field :tenth_percentage, class: "form-control" %>
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
-          <%= f.label :percentage_12th %>
-          <%= f.text_field :percentage_12th, class: "form-control" %>
+          <%= f.label :hsc_percentage %>
+          <%= f.text_field :hsc_percentage, class: "form-control" %>
         </div>
       </div>
     </div>
@@ -102,14 +81,14 @@
     <div class="row">
       <div class="col-md-6">
         <div class="form-group">
-          <%= f.label :adhar_card_number %>
-          <%= f.text_field :adhar_card_number, class: "form-control" %>
+          <%= f.label :aadhaar %>
+          <%= f.text_field :aadhaar, class: "form-control" %>
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
-          <%= f.label :pan_card_number %>
-          <%= f.text_field :pan_card_number, class: "form-control" %>
+          <%= f.label :pan %>
+          <%= f.text_field :pan, class: "form-control" %>
         </div>
       </div>
     </div>
@@ -123,8 +102,8 @@
       </div>
       <div class="col-md-6">
         <div class="form-group">
-          <%= f.label :instagram_id %>
-          <%= f.text_field :instagram_id, class: "form-control" %>
+          <%= f.label :instagram %>
+          <%= f.text_field :instagram, class: "form-control" %>
         </div>
       </div>
     </div>
@@ -132,29 +111,14 @@
     <div class="row">
       <div class="col-md-6">
         <div class="form-group">
-          <%= f.label :facebook_id %>
-          <%= f.text_field :facebook_id, class: "form-control" %>
+          <%= f.label :facebook %>
+          <%= f.text_field :facebook, class: "form-control" %>
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
-          <%= f.label :twitter_id %>
-          <%= f.text_field :twitter_id, class: "form-control" %>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-6">
-        <div class="form-group">
-          <%= f.label :thread_id %>
-          <%= f.text_field :thread_id, class: "form-control" %>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group">
-          <%= f.label :whatsapp_number %>
-          <%= f.text_field :whatsapp_number, class: "form-control" %>
+          <%= f.label :twitter %>
+          <%= f.text_field :twitter, class: "form-control" %>
         </div>
       </div>
     </div>
@@ -162,29 +126,14 @@
     <div class="row">
       <div class="col-md-6">
         <div class="form-group">
-          <%= f.label :father_number %>
-          <%= f.text_field :father_number, class: "form-control" %>
+          <%= f.label :thread%>
+          <%= f.text_field :thread, class: "form-control" %>
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
-          <%= f.label :mother_number %>
-          <%= f.text_field :mother_number, class: "form-control" %>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-6">
-        <div class="form-group">
-          <%= f.label :father_contact %>
-          <%= f.text_field :father_contact, class: "form-control" %>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group">
-          <%= f.label :mother_contact %>
-          <%= f.text_field :mother_contact, class: "form-control" %>
+          <%= f.label :whatsapp %>
+          <%= f.text_field :whatsapp, class: "form-control" %>
         </div>
       </div>
     </div>
@@ -192,8 +141,67 @@
     <div class="row">
       <div class="col-md-6">
         <div class="form-group">
-          <%= f.label :marital_status %>
-          <%# <%= f.select :marital_status, options_for_select(["Single", "Married", "Divorced", "Widowed"], selected: @f.marital_status), {}, class: "form-control" %> %>
+          <%= f.label :fatherName %>
+          <%= f.text_field :fatherName, class: "form-control" %>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :MotherName %>
+          <%= f.text_field :MotherName, class: "form-control" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :Fathercontact %>
+          <%= f.text_field :Fathercontact, class: "form-control" %>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :MotherContact %>
+          <%= f.text_field :MotherContact, class: "form-control" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :Marital_status %>
+          <%= f.text_field :Marital, class: "form-control" %>
+          
+        </div>
+      </div>
+    </div>
+
+        <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :FavColor %>
+          <%= f.text_field :FavColor, class: "form-control" %>
+          
+        </div>
+      </div>
+    </div>
+      <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :DOB %>
+          <%= f.text_field :DOB, class: "form-control" %>
+          
+        </div>
+      </div>
+    </div>
+        <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= f.label :nickName %>
+          <%= f.text_field :nickName, class: "form-control" %>
+          
         </div>
       </div>
     </div>
