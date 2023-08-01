@@ -1,69 +1,89 @@
 # SQLite. Versions 3.8.0 and up are supported.
 #   gem install sqlite3
-#
+
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem "sqlite3"
-#
-# default: &default
-#   adapter: sqlite3
-#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-#   timeout: 5000
 
-# development:
-#   <<: *default
-#   database: db/development.sqlite3
+default: &default
+  adapter: sqlite3
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  database: db/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 
-# test:
-#   <<: *default
-#   database: db/test.sqlite3
+test:
+  <<: *default
+  database: db/test.sqlite3
 
-# production:
-#   <<: *default
-#   database: db/production.sqlite3
+production:
+  <<: *default
+  database: db/production.sqlite3
 
 
 #####postgresql#######
 
-default: &default
+# default: &default
 
-  adapter: postgresql
 
-  encoding: unicode
 
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#   encoding: unicode
 
-  host: <%= ENV['DB_HOST'] || 'localhost' %>
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
-  port: <%= ENV['PORT'] || '5434' %>
+#   host: <%= ENV['DB_HOST'] || 'localhost' %>
 
-  username: <%= ENV['DB_USER'] || 'admin' %>
+#   port: <%= ENV['PORT'] || '5434' %>
 
-  password: <%= ENV['DB_PASSWORD'] || 'admin123' %>
+#   username: <%= ENV['DB_USER'] || 'admin' %>
 
- 
-
-development:
-
-  <<: *default
-
-  database: user_management
+#   password: <%= ENV['DB_PASSWORD'] || 'admin123' %>
 
  
 
-test:
+# development:
 
-  <<: *default
+#   <<: *default
 
-  database: user_management_test
+#   database: user_management
 
  
 
-production:
+# test:
 
-  <<: *default
+#   <<: *default
 
-  database: user_management_production
+#   database: user_management_test
+
+ 
+
+# production:
+
+#   <<: *default
+
+#   database: user_management_production
+
+# default: &default
+#   host: localhost
+#   port: 5434
+#   pool: 5
+#   timeout: 5000
+#   database: user_management
+#   username: admin
+#   password: admin123
+
+# development:
+#   <<: *default
+
+
+# test:
+#   <<: *default
+
+
+# production:
+#   <<: *default

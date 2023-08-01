@@ -11,20 +11,20 @@
       <div class="row">
         <div class="col-md-3">
           <div class="form-group">
-            <%= f.label :door_number %>
-            <%= f.text_field :door_number, class: "form-control" %>
+            <%= f.label :Door_number %>
+            <%= f.text_field :Door_number, class: "form-control" %>
           </div>
         </div>
         <div class="col-md-3">
           <div class="form-group">
-            <%= f.label :floor_number %>
-            <%= f.text_field :floor_number, class: "form-control" %>
+            <%= f.label :Floor_number %>
+            <%= f.text_field :Floor_number, class: "form-control" %>
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <%= f.label :building_name %>
-            <%= f.text_field :building_name, class: "form-control" %>
+            <%= f.label :Building_name %>
+            <%= f.text_field :Building_name, class: "form-control" %>
           </div>
         </div>
       </div>
@@ -33,14 +33,14 @@
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <%= f.label :street_name %>
-            <%= f.text_field :street_name, class: "form-control" %>
+            <%= f.label :Street_name %>
+            <%= f.text_field :Street_name, class: "form-control" %>
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <%= f.label :area %>
-            <%= f.text_field :area, class: "form-control" %>
+            <%= f.label :Area %>
+            <%= f.text_field :Area, class: "form-control" %>
           </div>
         </div>
       </div>
@@ -49,14 +49,14 @@
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <%= f.label :post %>
-            <%= f.text_field :post, class: "form-control" %>
+            <%= f.label :Post %>
+            <%= f.text_field :Post, class: "form-control" %>
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <%= f.label :village_town %>
-            <%= f.text_field :village_town, class: "form-control" %>
+            <%= f.label :village %>
+            <%= f.text_field :village, class: "form-control" %>
           </div>
         </div>
       </div>
@@ -65,14 +65,14 @@
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <%= f.label :pincode %>
-            <%= f.text_field :pincode, class: "form-control" %>
+            <%= f.label :Pincode %>
+            <%= f.text_field :Pincode, class: "form-control" %>
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <%= f.label :landmark %>
-            <%= f.text_field :landmark, class: "form-control" %>
+            <%= f.label :Landmark %>
+            <%= f.text_field :Landmark, class: "form-control" %>
           </div>
         </div>
       </div>
@@ -81,14 +81,14 @@
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <%= f.label :city %>
-            <%= f.text_field :city, class: "form-control" %>
+            <%= f.label :City %>
+            <%= f.text_field :City, class: "form-control" %>
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <%= f.label :district %>
-            <%= f.text_field :district, class: "form-control" %>
+            <%= f.label :District %>
+            <%= f.text_field :District, class: "form-control" %>
           </div>
         </div>
       </div>
@@ -97,14 +97,14 @@
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <%= f.label :state %>
-            <%= f.text_field :state, class: "form-control" %>
+            <%= f.label :State %>
+            <%= f.text_field :State, class: "form-control" %>
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <%= f.label :country %>
-            <%= f.text_field :country, class: "form-control" %>
+            <%= f.label :Country %>
+            <%= f.text_field :Country, class: "form-control" %>
           </div>
         </div>
       </div>
@@ -113,14 +113,14 @@
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <%= f.label :continent %>
-            <%= f.text_field :continent, class: "form-control" %>
+            <%= f.label :Continent %>
+            <%= f.text_field :Continent, class: "form-control" %>
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <%= f.label :current_address %>
-            <%= f.text_area :current_address, class: "form-control" %>
+            <%= f.label :Current_address %>
+            <%= f.text_area :Current_address, class: "form-control" %>
           </div>
         </div>
       </div>
@@ -128,7 +128,7 @@
       <!-- Submit Button -->
       <div class="row">
         <div class="col-md-12">
-            <a href="<%= office_path %>" class="btn btn-success ml-3">Next</a>
+<%= f.submit 'Submit', class: "btn btn-danger btn-block m-5" %>
         </div>
       </div>
     <% end %>

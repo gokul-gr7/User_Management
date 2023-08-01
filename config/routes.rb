@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   
   # root 'welcome#index'
   root 'home#index' 
-  # get 'home/index'
+
   # get 'home/form'
 
   get '/form', to: 'home#form'
@@ -17,10 +17,10 @@ Rails.application.routes.draw do
   post '/office', to: 'home#create_office'
 
 
-
-
   devise_for :users
   devise_scope :user do  
     get '/users/sign_out' => 'devise/sessions#destroy'   
     end  
+
+    get 'home/index', to: 'home#index', as: :search
 end
