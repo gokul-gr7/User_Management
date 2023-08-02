@@ -27,35 +27,22 @@
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th>Employee</th>
-            <th>Company</th>
-            <th>Branch</th>
+              <% params[:column_name].split(',').each do |column_name| %>
+              <th><%= column_name.strip.titleize %></th>
+            <% end %>
           </tr>
         </thead>
         <tbody>
           <% @results.each do |result| %>
             <tr>
-              <td><%= result['Employee'].first %></td>
-              <td><%= result['Company'].first %></td>
-              <td><%= result['Branch'].first %></td>
+              <% params[:column_name].split(',').each do |column_name| %>
+                <td><%= result[column_name.strip].first %></td>
+              <% end %>
             </tr>
           <% end %>
         </tbody>
       </table>
     </div>
-          <ul>
-        <% @results.each do |result| %>
-          <% if params[:column_name].present? %>
-            <% column_name = params[:column_name] %>
-            <% if result.key?(column_name) %>
-              <li>
-                <strong><%= params[:column_name].titleize %>:</strong> <%= result[column_name].first %>
-              </li>
-              <br>
-            <% end %>
-          <% end %>
-        <% end %>
-      </ul>
 
   <% else %>
   <% end %>
