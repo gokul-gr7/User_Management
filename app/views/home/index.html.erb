@@ -15,6 +15,7 @@
       <%= form_tag(search_path, method: :get, class: "search-form") do %>
         <div class="input-group">
           <%= text_field_tag(:query, params[:query], class: "form-control", placeholder: "Enter id to search") %>
+           <%= text_field_tag(:column_name, params[:column_name], class: "form-control", placeholder: "Enter column name") %>
           <button type="submit" class="btn btn-primary">Search</button>
         </div>
       <% end %>
@@ -42,6 +43,20 @@
         </tbody>
       </table>
     </div>
+          <ul>
+        <% @results.each do |result| %>
+          <% if params[:column_name].present? %>
+            <% column_name = params[:column_name] %>
+            <% if result.key?(column_name) %>
+              <li>
+                <strong><%= params[:column_name].titleize %>:</strong> <%= result[column_name].first %>
+              </li>
+              <br>
+            <% end %>
+          <% end %>
+        <% end %>
+      </ul>
+
   <% else %>
   <% end %>
 </div>

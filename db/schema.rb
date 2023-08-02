@@ -41,16 +41,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_31_093856) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "employees", force: :cascade do |t|
-    t.string "Company"
-    t.string "Role"
-    t.string "Employee_id"
-    t.string "Employee"
-    t.string "mail_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "landmarks", force: :cascade do |t|
     t.string "Door_number"
     t.string "Floor_number"
