@@ -4,8 +4,8 @@ class HomeController < ApplicationController
 
   def index
 
+
     @details = Detail.all
-    session.clear
     puts "HomeController"
     if params[:query].present?
       @results = search_solr(params[:query])
@@ -99,9 +99,6 @@ class HomeController < ApplicationController
     end
 
   end
-
- 
-
  
 
   def office
@@ -175,7 +172,6 @@ class HomeController < ApplicationController
 
   end
 
- 
 
   def address_params
 
@@ -183,19 +179,11 @@ class HomeController < ApplicationController
 
   end
 
- 
-
   def office_params
 
     params.require(:office).permit(:Company, :Role,:Employee_id, :Employee, :mail_id, :Laptop_serial,:Laptop_mode, :Laptop_Brand, :Laptop_Mac, :Hoodies,:Experience, :Account_number, :Bank_name, :Branch,:IFSC_code, :Account_holder)
 
   end
-
-
-
- 
-
- 
 
 def search_solr(query)
 
