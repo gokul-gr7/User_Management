@@ -7,14 +7,14 @@ Rails.application.routes.draw do
 
   # get 'home/form'
 
-  get '/form', to: 'home#form'
-  post '/form', to: 'home#create_form'
+  get '/user_details', to: 'home#form'
+  post '/user_details', to: 'home#create_form'
 
-  get '/address', to: 'home#address'
-  post '/address', to: 'home#create_address'
+  get '/address_details', to: 'home#address'
+  post '/address_details', to: 'home#create_address'
 
-  get '/office', to: 'home#office'
-  post '/office', to: 'home#create_office'
+  get '/office_details', to: 'home#office'
+  post '/office_details', to: 'home#create_office'
 
 
   devise_for :users

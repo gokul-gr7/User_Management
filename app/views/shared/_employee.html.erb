@@ -8,7 +8,7 @@
   <div class="container mt-4">
 
 <div class="container mt-4">
-<%= form_with(model: @employee, url: office_path, local: true) do |f| %>
+<%= form_with(model: @employee, url: office_details_path, local: true) do |f| %>
     <div class="row">
       <div class="col-md-6">
         <div class="form-group">
@@ -64,14 +64,14 @@
     <div class="row">
       <div class="col-md-6">
         <div class="form-group">
-          <%= f.label :Laptop_brand %>
-          <%= f.text_field :Laptop_brand, class: "form-control" %>
+          <%= f.label :Laptop_Brand %>
+          <%= f.text_field :Laptop_Brand, class: "form-control" %>
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
-          <%= f.label :Laptop_mac %>
-          <%= f.text_field :Laptop_mac, class: "form-control" %>
+          <%= f.label :Laptop_Mac %>
+          <%= f.text_field :Laptop_Mac, class: "form-control" %>
         </div>
       </div>
     </div>
@@ -80,29 +80,7 @@
       <div class="col-md-12">
         <div class="form-group">
           <%= f.label :Hoodies %>
-          <div class="form-check">
-            <%= f.check_box :waterbottle, class: "form-check-input" %>
-            <%= f.label :waterbottle, class: "form-check-label" do %>
-              Water Bottle
-            <% end %>
-          </div>
-          <div class="form-check">
-            <%= f.check_box :headset, class: "form-check-input" %>
-            <%= f.label :headset, class: "form-check-label" do %>
-              Headset
-            <% end %>
-          </div>
-          <div class="form-check">
-            <%= f.check_box :mobile, class: "form-check-input" %>
-            <%= f.label :mobile, class: "form-check-label" do %>
-              Mobile
-            <% end %>
-          </div>
-          <div class="form-check">
-            <%= f.check_box :bag, class: "form-check-input" %>
-            <%= f.label :bag, class: "form-check-label" do %>
-              Bag
-            <% end %>
+          <%= f.text_area :Hoodies, class: "form-control" %>
           </div>
         </div>
       </div>

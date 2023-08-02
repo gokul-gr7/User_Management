@@ -1,61 +1,47 @@
+<%= render 'shared/navbar' %>
 
-<%=render 'shared/navbar'%>
-
-    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-      <h1 class="display-4 fw-normal text-body-emphasis">Welcome</h1>
-      <p class="fs-5 text-body-secondary">This is a Simple user Management project</p>
-    </div>
-
-    <div class="container d-flex align-items-center justify-content-center">
-    <%= link_to form_path do %>
-      <button class="btn btn-primary btn-lg" type="button">Add User</button>
-    <% end %>
-
-     <%= form_tag(search_path, method: :get, class: "search-form") do %>
-
-    <div class="inner-form">
-
-      <div class="input-group">
-
-        <%= text_field_tag(:query, params[:query], class: "form-control", placeholder: "Enter id to search ") %>
-
-        <%= submit_tag('Search', class: "btn btn-primary") %>
-      </div>
-    </div>
-
-  <% end %>
-    </div>
-
-<div class="search-results m-5 text-dark p-5">
-    <% if @results.any? %>
-
-      <h3>Search Results:</h3>
-
-      <ul>
-
-        <% @results.each do |result| %>
-
-          <li>
-
-            <strong>Employee:</strong> <%= result['Employee'].first %>
-          </li>
-            <br>
-          <li>
-            <strong>Company:</strong> <%= result['Company'].first %>
-          </li>
-            <br>
-          <li>
-            <strong>Branch:</strong> <%= result['Branch'].first %>
-
-
-          </li>
-
-        <% end %>
-
-      </ul>
-
-    <% end %>
-
+<div class="container mt-5">
+  <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal text-body-emphasis">Welcome</h1>
+    <p class="fs-5 text-body-secondary">This is a Simple user Management project</p>
   </div>
 
-   
+  <div class="row justify-content-center mb-5">
+    <div class="col-md-6 text-center">
+      <%= link_to user_details_path, class: "btn btn-primary btn-lg btn-block mb-3" do %>
+        Add User
+      <% end %>
+
+      <%= form_tag(search_path, method: :get, class: "search-form") do %>
+        <div class="input-group">
+          <%= text_field_tag(:query, params[:query], class: "form-control", placeholder: "Enter id to search") %>
+          <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <% if @results.any? %>
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Employee</th>
+            <th>Company</th>
+            <th>Branch</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @results.each do |result| %>
+            <tr>
+              <td><%= result['Employee'].first %></td>
+              <td><%= result['Company'].first %></td>
+              <td><%= result['Branch'].first %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  <% else %>
+  <% end %>
+</div>
