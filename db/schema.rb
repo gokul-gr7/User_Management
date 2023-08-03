@@ -11,6 +11,9 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_07_31_093856) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "details", force: :cascade do |t|
     t.string "firstName"
     t.string "lastName"
@@ -37,26 +40,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_31_093856) do
     t.string "FavColor"
     t.string "DOB"
     t.string "nickName"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "landmarks", force: :cascade do |t|
-    t.string "Door_number"
-    t.string "Floor_number"
-    t.string "Building_name"
-    t.string "Street_name"
-    t.string "Area"
-    t.string "Post"
-    t.string "village"
-    t.string "Pincode"
-    t.string "Landmark"
-    t.string "City"
-    t.string "District"
-    t.string "State"
-    t.string "Country"
-    t.string "Continent"
-    t.string "Current_address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
